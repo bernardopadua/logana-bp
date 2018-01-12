@@ -1,0 +1,1 @@
+web: gunicorn logana.wsgi --log-file -
