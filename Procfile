@@ -1,1 +1,1 @@
-web: gunicorn logana.wsgi --log-file -
+web: gunicorn loganapanel.wsgi --log-file -
