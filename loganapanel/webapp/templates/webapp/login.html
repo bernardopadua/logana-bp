@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block main  %}
+    {% if message %}    
+        <div id="message" style="display:none;">
+            {{message}}
+        </div>
+    {% endif %}
+    <div id="logana-login"></div>
+    <script type="text/javascript" src="{% static 'js/loganalogin.bundle.js' %}"></script>
+{% endblock main %}

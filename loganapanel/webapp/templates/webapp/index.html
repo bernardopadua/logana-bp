@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block main %}
+    
+    {% if token %}
+        <div id="logana-token">
+            {{token}}
+        </div>
+    {% endif %}
+
+    <div id="logana-panel"></div>
+    <script type="text/javascript" src="{% static 'js/loganapanel.bundle.js' %}"></script>
+{% endblock main %}

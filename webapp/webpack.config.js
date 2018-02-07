@@ -1,13 +1,26 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const config = {
-    entry: {
-        app: './src/App.js'
+    entry:{
+        loganapanel: ['react-hot-loader/patch', './src/loganapanel/index.js'],
+        //loganalogin: './src/loganalogin/logana-login.js'
     },
+    //['react-hot-loader/patch', './src/loganapanel/index.js'],
+    plugins: [
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
+    ],
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js'
+        path: path.resolve(__dirname, 'dist/assets/js/'),
+        filename: '[name].bundle.js',
+        publicPath: 'assets/js'
     },
+    devServer:{
+        hot: true,
+        contentBase: 'dist/',
+        historyApiFallback: true
+    }, 
     module: {
         rules: [
             {
@@ -15,7 +28,45 @@ const config = {
                 include: [
                     path.resolve(__dirname, './src')
                 ],
-                use: 'babel-loader'
+                loader: 'babel-loader',
+                options: {
+                    cacheDirectory: true,
+                    plugins: ['react-hot-loader/babel']
+                }
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },
+            {
+                test: /\.(ico|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
+                use: [
+                    {
+                        loader: 'file-loader?limit=100000',
+                        options: {
+                            name: 'assets/fonts/[name].[ext]'
+                        }  
+                    }
+                ]
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                use: [
+                {
+                    loader: 'file-loader?limit=100000',
+                    options: {
+                        name: 'assets/img/[name].[ext]',
+                        publicPath: '/static/img/'
+                    }  
+                },
+                {
+                    loader: 'img-loader',
+                    options: {
+                        enabled: true,
+                        optipng: true
+                    }
+                }
+                ]
             }
         ]
     },

@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -36,10 +35,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    #'django.contrib.staticfiles',
+    'django.contrib.staticfiles',
 
     'loganapanel.canned_speech',
-    'loganapanel.forum_logs'
+    'loganapanel.forum_log',
+    'loganapanel.webapp',
+    'loganapanel.login'
 ]
 
 TEMPLATES = [
@@ -110,4 +111,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-#STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR + '/staticfiles'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    (BASE_DIR + '/loganapanel/static'),
+)
+
+# CORS
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = False
+ALLOWED_HOSTS = ['*']

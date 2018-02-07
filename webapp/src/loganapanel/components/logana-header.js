@@ -8,7 +8,6 @@ class LogHeader extends Component {
     }
 
     render(){
-        this.props.PleaseClick();
         return (
             <Container fluid textAlign='left'>
                 <Header as='h1' icon='archive' content='Log Analysis Manager' />

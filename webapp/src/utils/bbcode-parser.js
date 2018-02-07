@@ -26,7 +26,7 @@ export default class BBCodeParser {
             return '<'+tag+'>' + text + '</'+tag+'>';
         };
         
-        const text = this.toParse;
+        let text = this.toParse;
         for (i in this.tags){
             const rgx = this.tags[i]['rg'];
             while((rs=rgx.exec(text))!=null){
