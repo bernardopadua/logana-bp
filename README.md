@@ -13,4 +13,4 @@ Made of what:
 * Semantic UI
 * Django
 
-### The project is very messy yet, sorry about that. I'm still studying the best way to build it, because there is some new ideas along the developing and I hope that I can unite everything and build complete tool. :)
+### The project is very messy yet, sorry about that. I'm still studying the best way to build it, because there are some new ideas poping up along the developing and I hope that I can unite everything and build complete tool. :)
