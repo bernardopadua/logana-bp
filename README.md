@@ -1,4 +1,6 @@
-## Logana - Log Analysis Manager / BP - BleepingComputer
+## Logana - Log Analysis Manager
+
+*Poject is on hold indefinetely*
 
 Hello everyone! I've been working in this project for few days only, so sorry the mess in the code.
 The goal of this "app" is to help malware analysts that volunteer in malware removal forums helping people to clean their computers.
