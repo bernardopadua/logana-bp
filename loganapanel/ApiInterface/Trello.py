@@ -6,8 +6,8 @@ class Trello:
     BASE_URL = "api.trello.com"
     BOARD_DB = "/1/board/s2nh9QCs/"
 
-    KEY      = "9b3e1209b74b993c3e1b6442f2403f48"
-    TOKEN    = "cdd0e63ec7ce67d6ec6d35a89ecb8341abe3e1ee62fc26f4f60b8a49bd51a4f2"
+    KEY      = ""
+    TOKEN    = ""
 
     def __init__(self):
         self.tablesId = {
