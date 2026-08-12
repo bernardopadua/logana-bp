@@ -1,5 +1,7 @@
-**Poject is terminated.**
+**The poject is terminated.**
+
 ---
+
 ## Logana - Log Analysis Manager
 
 Hello everyone! I've been working in this project for few days only, so sorry the mess in the code.
