@@ -1,4 +1,4 @@
-**The poject is terminated.**
+**The project is terminated.**
 
 ---
 
